@@ -1,0 +1,22 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+body {
+    font-family: Black Ops One, cursive;
+    padding: 32 px 64 px;
+    font-size: 24px;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 36px;
+    margin-bottom: 36px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 36px
+}
+
+img {
+    max-width: 200px;
+}

@@ -1,0 +1,15 @@
+<header>
+    <h1>G.I.Joe Collection Tracker</h1>
+</header>
+
+<main>
+    <h2>Figures</h2>
+    <ul>
+        <li *ngFor="let figure of figures">
+            <app-figure-listing [imageUrl]="figure.imageUrl" [name]="figure.name" [year]="figure.year" [team]="figure.team" [variation]="figure.variation"></app-figure-listing>
+        </li>
+    </ul>
+
+
+
+</main>
