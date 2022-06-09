@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FigureService } from './figure.service';
-import { Figure } from './models/Figure';
+import { FigureService } from '../figure.service';
+import { Figure } from '../models/Figure';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-figure-detail',
+  templateUrl: './figure-detail.component.html',
+  styleUrls: ['./figure-detail.component.scss']
 })
-export class AppComponent implements OnInit {
+export class FigureDetailComponent implements OnInit {
   title(title: any) {
     throw new Error('Method not implemented.');
   }

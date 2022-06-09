@@ -1,6 +1,11 @@
 import {Injectable} from '@angular/core';
 import { of } from 'rxjs';
 import {Figure} from './models/Figure';
+import {HttpClient} from '@angular/common/http';
+
+type FiguresResponse = {
+  figures: Figure[];
+}
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +19,11 @@ export class FigureService {
     variation: "Straight-arm",
 }]
 
+constructor(private http: HttpClient ){}
+
+
 fetchFigures() {
-  return of(this.figures)
+  return this.http.get<FiguresResponse>("https://gijoe-api.herokuapp.com/api/gijoe")
 }
 
 }

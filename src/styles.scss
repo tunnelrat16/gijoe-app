@@ -6,10 +6,22 @@ body {
     font-size: 24px;
 }
 
-h1 {
+.static-top {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    background: #2b416a url(https://www.yojoe.com/00_img/mastheadBack-2.png) repeat-x scroll center top;
+    /* background: #ffffff; */
+    height: 115px;
+    overflow: hidden;
+    position: relative;
+}
+
+.static-top h1 {
     font-weight: 200;
     font-size: 36px;
     margin-bottom: 36px;
+    color: white;
 }
 
 h2 {
@@ -19,4 +31,48 @@ h2 {
 
 img {
     max-width: 200px;
+}
+
+.navigation-bar ul {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 16px;
+    margin-top: -25px;
+}
+
+.navigation-bar ul li+li {
+    margin-left: 24px
+}
+
+.navigation-bar ul :not(.active) {
+    text-decoration: none
+}
+
+.navigation-bar ul .active {
+    text-decoration: underline
+}
+
+#home-page {
+    font-size: 24px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center
+}
+
+#home-page .hero-header {
+    margin-bottom: 64px;
+    text-align: center
+}
+
+#home-page .hero-header h2 {
+    font-size: 60px;
+    letter-spacing: -2px;
+    text-align: center;
+    z-index: 10
+}
+
+#home-page p {
+    max-width: 800px;
+    line-height: 1.5;
+    text-align: center;
 }

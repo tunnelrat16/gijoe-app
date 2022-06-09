@@ -1,15 +1,8 @@
-<header>
-    <h1>G.I.Joe Collection Tracker</h1>
+<header class="static-top">
+    <h1>G.I.JOE Collection Tracker</h1>
+    <app-nav-bar></app-nav-bar>
 </header>
-
 <main>
-    <h2>Figures</h2>
-    <ul>
-        <li *ngFor="let figure of figures">
-            <app-figure-listing [imageUrl]="figure.imageUrl" [name]="figure.name" [year]="figure.year" [team]="figure.team" [variation]="figure.variation"></app-figure-listing>
-        </li>
-    </ul>
-
-
-
+    <router-outlet></router-outlet>
+    <app-figure-detail></app-figure-detail>
 </main>
