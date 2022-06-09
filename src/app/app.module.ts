@@ -11,6 +11,8 @@ import { WantListComponent } from './want-list/want-list.component';
 import { CollectionPageComponent } from './collection-page/collection-page.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { FigureDetailComponent } from './figure-detail/figure-detail.component';
+import { NavYearComponent } from './nav-year/nav-year.component';
+import { YearPageComponent } from './year-page/year-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { FigureDetailComponent } from './figure-detail/figure-detail.component';
     WantListComponent,
     CollectionPageComponent,
     ErrorPageComponent,
-    FigureDetailComponent
+    FigureDetailComponent,
+    NavYearComponent,
+    YearPageComponent
   ],
   imports: [
     BrowserModule,

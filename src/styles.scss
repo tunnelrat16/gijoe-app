@@ -72,7 +72,27 @@ img {
 }
 
 #home-page p {
-    max-width: 800px;
+    max-width: 850px;
     line-height: 1.5;
     text-align: center;
+}
+
+.navigation-year ul {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 16px;
+    margin-top: 20px;
+    font-size: larger;
+}
+
+.navigation-year ul li+li {
+    margin-left: 24px
+}
+
+.navigation-year ul :not(.active) {
+    text-decoration: none
+}
+
+.navigation-year ul .active {
+    text-decoration: underline
 }

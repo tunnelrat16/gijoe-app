@@ -4,6 +4,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { CollectionPageComponent} from './collection-page/collection-page.component';
 import { WantListComponent } from './want-list/want-list.component';
 import { FigureDetailComponent } from './figure-detail/figure-detail.component';
+import { YearPageComponent } from './year-page/year-page.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 
 
@@ -21,6 +22,9 @@ const routes: Routes = [{
   }, {
     path: "figure",
     component: FigureDetailComponent,
+  }, {
+    path: "year",
+    component: YearPageComponent,
   }, {
     path: "error",
     component: ErrorPageComponent,
