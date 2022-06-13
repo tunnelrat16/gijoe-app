@@ -6,6 +6,7 @@ import { Component, Input } from "@angular/core";
   styleUrls: ["./figure-listing.component.scss"]
 })
 export class FigureListingComponent {
+  @Input() id!: number;
   @Input() name!: string;
   @Input() year!: string;
   @Input() team!: string;

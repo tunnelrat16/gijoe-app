@@ -1,2 +1,9 @@
 <app-nav-year></app-nav-year>
-<app-figure-detail></app-figure-detail>
+<div class="year-page">
+    <h2>Figure List</h2>
+    <ul class="year-list">
+        <li *ngFor="let figure of figures">
+            <app-figure-list [name]="figure.name" [id]='figure.id'></app-figure-list>
+        </li>
+    </ul>
+</div>

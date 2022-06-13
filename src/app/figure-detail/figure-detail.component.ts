@@ -8,9 +8,6 @@ import { Figure } from '../models/Figure';
   styleUrls: ['./figure-detail.component.scss']
 })
 export class FigureDetailComponent implements OnInit {
-  title(title: any) {
-    throw new Error('Method not implemented.');
-  }
   figures: Figure[] = [];
 
   constructor(private figureService: FigureService) {}

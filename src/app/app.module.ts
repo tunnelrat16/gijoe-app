@@ -13,6 +13,8 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { FigureDetailComponent } from './figure-detail/figure-detail.component';
 import { NavYearComponent } from './nav-year/nav-year.component';
 import { YearPageComponent } from './year-page/year-page.component';
+import { FigureListComponent } from './figure-list/figure-list.component';
+import { DetailPageComponent } from './detail-page/detail-page.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { YearPageComponent } from './year-page/year-page.component';
     ErrorPageComponent,
     FigureDetailComponent,
     NavYearComponent,
-    YearPageComponent
+    YearPageComponent,
+    FigureListComponent,
+    DetailPageComponent
   ],
   imports: [
     BrowserModule,

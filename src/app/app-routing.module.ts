@@ -6,28 +6,32 @@ import { WantListComponent } from './want-list/want-list.component';
 import { FigureDetailComponent } from './figure-detail/figure-detail.component';
 import { YearPageComponent } from './year-page/year-page.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { DetailPageComponent } from './detail-page/detail-page.component';
 
 
 const routes: Routes = [{
-  path: "home",
+  path: 'home',
   component: HomePageComponent,
 },{
     path: '', redirectTo: '/home', pathMatch: 'full'
   },{
-    path: "collection",
+    path: 'collection',
     component: CollectionPageComponent,
   }, {
-    path: "want",
+    path: 'want',
     component: WantListComponent,
   }, {
-    path: "figure",
+    path: 'figure',
     component: FigureDetailComponent,
   }, {
-    path: "year",
+    path: 'year',
     component: YearPageComponent,
   }, {
-    path: "error",
+    path: 'error',
     component: ErrorPageComponent,
+  }, {
+    path: 'detail/:id',
+    component: DetailPageComponent,
 }];
 
 @NgModule({

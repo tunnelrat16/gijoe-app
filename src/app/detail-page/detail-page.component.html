@@ -1,0 +1,13 @@
+<div>
+    <app-nav-year></app-nav-year>
+    <h2>Selected Figure Details</h2>
+    <div *ngIf="figure">
+        <h2>{{figure.name | uppercase}} Details</h2>
+        <div>id: {{figure.id}}</div>
+    </div>
+    <!-- <ul>
+        <li *ngFor="let figure of figures">
+            <app-figure-listing [imageUrl]="figure.imageUrl" [name]="figure.name" [year]="figure.year" [team]="figure.team" [variation]="figure.variation"></app-figure-listing>
+        </li>
+    </ul> -->
+</div>
