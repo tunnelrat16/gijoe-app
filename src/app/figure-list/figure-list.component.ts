@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Figure } from '../models/Figure';
+import { FigureService } from '../figure.service';
 
 @Component({
   selector: 'app-figure-list',

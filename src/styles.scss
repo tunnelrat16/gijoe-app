@@ -1,9 +1,13 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap');
 body {
-    font-family: Black Ops One, cursive;
+    font-family: Chakra Petch, sans-serif;
     padding: 32 px 64 px;
     font-size: 24px;
+    background-image: url(./assets/Joeclear.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .static-top {
@@ -18,14 +22,18 @@ body {
 }
 
 .static-top h1 {
+    font-family: Black Ops One, cursive;
     font-weight: 200;
     font-size: 36px;
     margin-bottom: 36px;
     color: white;
     margin-left: 20px;
+    margin-top: 5px;
 }
 
 h2 {
+    font-family: Black Ops One, cursive;
+    font-weight: 100;
     font-size: 40px;
     margin-bottom: 36px;
     margin-left: 40px
@@ -39,22 +47,29 @@ img {
     display: flex;
     flex-flow: row wrap;
     margin-bottom: 16px;
-    margin-top: -25px;
+    margin-top: -35px;
     margin-left: 20px;
 }
 
 .navigation-bar ul li+li {
-    margin-left: 24px;
+    margin-left: 50px;
 }
 
 .navigation-bar ul :not(.active) {
     text-decoration: none;
     color: black;
-    font-size: 24px;
+    font-weight: 900;
+    font-size: 30px;
 }
 
 .navigation-bar ul .active {
     font-size: 30px;
+    text-decoration: none;
+    color: red;
+}
+
+.navigation-bar ul li:hover {
+    text-shadow: 2px 2px 5px rgb(104, 103, 103);
 }
 
 #home-page {
@@ -88,7 +103,7 @@ img {
     flex-flow: row wrap;
     margin-bottom: 16px;
     margin-top: 30px;
-    font-size: larger;
+    font-size: 40px;
     margin-left: 30px;
 }
 
@@ -99,10 +114,15 @@ img {
 .navigation-year ul :not(.active) {
     text-decoration: none;
     color: black;
+    font-weight: 900;
 }
 
 .navigation-year ul .active {
     text-decoration: underline
+}
+
+.navigation-year ul li:hover {
+    text-shadow: 2px 2px 5px rgb(104, 103, 103);
 }
 
 .year-list {
@@ -111,4 +131,18 @@ img {
     grid-template-rows: 1fr;
     padding: 10px;
     margin-left: 30px;
+}
+
+.figure-list {
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+
+.figure-name {
+    color: black;
+    text-decoration: none;
+}
+
+.figure-name:hover {
+    text-shadow: 2px 2px 5px yellow
 }
