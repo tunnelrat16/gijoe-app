@@ -1,8 +1,3 @@
-<div>
-    <app-nav-year></app-nav-year>
-    <h2>Selected Figure Details</h2>
-    <div *ngIf="figure">
-        <h2>{{figure.name}} Details</h2>
-        <div>id: {{figure.id}}</div>
-    </div>
+<div *ngIf="figure">
+    <app-figure-listing></app-figure-listing>
 </div>

@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Figure } from '../models/Figure';
 import { ActivatedRoute } from '@angular/router';
-
+import { Location } from '@angular/common';
 import { FigureService } from '../figure.service';
 
 @Component({
@@ -10,22 +10,26 @@ import { FigureService } from '../figure.service';
   styleUrls: ['./detail-page.component.scss'],
 })
 export class DetailPageComponent implements OnInit {
-  @Input() figure?: Figure;
+figure: Figure | undefined;
 
-  figures: Figure[] = [];
 
   constructor(
     private route: ActivatedRoute,
     private figureService: FigureService,
+    private location: Location,
   ) {}
 
   ngOnInit(): void {
     this.getFigure();
+
   }
 
   getFigure(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.figureService.getFigure(id)
-      .subscribe(figure => this.figure = figure);
+      .subscribe(figure => {console.log(figure);
+        this.figure = figure;
+
+      })
   }
 }
