@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { FigureListingComponent } from './figure-listing/figure-listing.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { WantListComponent } from './want-list/want-list.component';
+import { WatchListComponent } from './watch-list/watch-list.component';
 import { CollectionPageComponent } from './collection-page/collection-page.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { FigureDetailComponent } from './figure-detail/figure-detail.component';
@@ -22,7 +22,7 @@ import { DetailPageComponent } from './detail-page/detail-page.component';
     FigureListingComponent,
     HomePageComponent,
     NavBarComponent,
-    WantListComponent,
+    WatchListComponent,
     CollectionPageComponent,
     ErrorPageComponent,
     FigureDetailComponent,

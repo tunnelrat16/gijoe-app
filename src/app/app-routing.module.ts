@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CollectionPageComponent} from './collection-page/collection-page.component';
-import { WantListComponent } from './want-list/want-list.component';
+import { WatchListComponent } from './watch-list/watch-list.component';
 import { FigureDetailComponent } from './figure-detail/figure-detail.component';
 import { YearPageComponent } from './year-page/year-page.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
@@ -18,8 +18,8 @@ const routes: Routes = [{
     path: 'collection',
     component: CollectionPageComponent,
   }, {
-    path: 'want',
-    component: WantListComponent,
+    path: 'watch',
+    component: WatchListComponent,
   }, {
     path: 'figure',
     component: FigureDetailComponent,

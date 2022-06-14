@@ -2,6 +2,9 @@
 
 An app for tracking your GIJoe collection.
 
+Web Site Production Location: https://joecollectionlist.netlify.app
+API Production Location: https://gijoe-api.herokuapp.com/api/gijoe
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
