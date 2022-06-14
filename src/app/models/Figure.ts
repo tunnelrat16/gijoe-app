@@ -5,4 +5,8 @@ export type Figure = {
   year: string;
   team: string;
   variation: string;
+  ownIt: string;
+  watchList: string;
+  total: string;
+  notes: string;
 }

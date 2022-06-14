@@ -12,5 +12,9 @@ export class FigureListingComponent {
   @Input() team!: string;
   @Input() variation!: string;
   @Input() imageUrl!: string;
+  @Input() ownIt!: string;
+  @Input() watchList!: string;
+  @Input() total!: string;
+  @Input() notes!: string;
 
 }

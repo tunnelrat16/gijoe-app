@@ -1,3 +1,12 @@
-<div *ngIf="figure">
+<!-- <div *ngIf="figure">
     <app-figure-listing></app-figure-listing>
+</div> -->
+
+<h2>Figure Details</h2>
+<div class="detail-page">
+    <ul class="detail-list">
+        <li *ngFor="let figure of figures">
+            <app-figure-listing [imageUrl]="figure.imageUrl" [name]="figure.name" [year]="figure.year" [team]="figure.team" [variation]="figure.variation" [ownIt]="figure.ownIt" [watchList]="figure.watchList" [total]="figure.total" [notes]="figure.notes"></app-figure-listing>
+        </li>
+    </ul>
 </div>
