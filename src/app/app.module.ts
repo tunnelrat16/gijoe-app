@@ -15,6 +15,7 @@ import { NavYearComponent } from './nav-year/nav-year.component';
 import { YearPageComponent } from './year-page/year-page.component';
 import { FigureListComponent } from './figure-list/figure-list.component';
 import { DetailPageComponent } from './detail-page/detail-page.component';
+import { UpdateFormComponent } from './update-form/update-form.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DetailPageComponent } from './detail-page/detail-page.component';
     NavYearComponent,
     YearPageComponent,
     FigureListComponent,
-    DetailPageComponent
+    DetailPageComponent,
+    UpdateFormComponent
   ],
   imports: [
     BrowserModule,

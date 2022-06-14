@@ -9,6 +9,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { DetailPageComponent } from './detail-page/detail-page.component';
 
 
+
 const routes: Routes = [{
   path: 'home',
   component: HomePageComponent,

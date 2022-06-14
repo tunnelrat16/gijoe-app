@@ -9,11 +9,14 @@ type FiguresResponse = {
   figures: Figure[];
 };
 
+type FigureResponse = {
+  figure: Figure;
+};
+
 @Injectable({
   providedIn: 'root',
 })
 export class FigureService {
-  // figures: Figure[] = [];
 
   constructor(
     private http: HttpClient,
@@ -31,35 +34,34 @@ export class FigureService {
   };
 
 
-  // /** GET figures from the server */
-  // getFigures(): Observable<Figure[]> {
-  //   return this.http.get<Figure[]>(this.figuresUrl).pipe(
-  //     tap((_) => this.log('fetched figures')),
-  //     catchError(this.handleError<Figure[]>('getFigures', []))
-  //   );
-  // }
-
-  /** GET figure by id. Will 404 if id not found */
-  getFigure(id: number): Observable<Figure> {
-    const url = `${this.figuresUrl}/${id}`;
-    return this.http.get<Figure>(url).pipe(
-      map((figure) => {
-        return figure;
-      })
+  /** GET figures from the server */
+  getFigures(): Observable<Figure[]> {
+    return this.http.get<Figure[]>(this.figuresUrl).pipe(
+      tap((_) => this.log('fetched figures')),
+      catchError(this.handleError<Figure[]>('getFigures', []))
     );
   }
 
-  // private handleError<T>(operation = 'operation', result?: T) {
-  //   return (error: any): Observable<T> => {
-  //     console.error(error);
-  //     this.log(`${operation} failed: ${error.message}`);
-  //     return of(result as T);
-  //   };
-  // }
+  /** GET figure by id. Will 404 if id not found */
+  getFigure(id: number){
+    const url = `${this.figuresUrl}/${id}`;
+    return this.http.get<FigureResponse>(url).pipe(
+      tap(_ => this.log(`fetched figure id=${id}`)),
+      catchError(this.handleError<FigureResponse>(`getFigure id=${id}`))
+    );
+  }
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      this.log(`${operation} failed: ${error.message}`);
+      return of(result as T);
+    };
+  }
 
 
   /** Log a HeroService message with the MessageService */
-  // private log(message: string) {
-  //   this.messageService.add(`FigureService: ${message}`);
-  // }
+  private log(message: string) {
+    this.messageService.add(`FigureService: ${message}`);
+  }
 }

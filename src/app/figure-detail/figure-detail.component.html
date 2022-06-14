@@ -1,6 +1,5 @@
-<h2>Figure Details</h2>
-<ul>
+<ul class="figure-detail">
     <li *ngFor="let figure of figures">
-        <app-figure-listing [imageUrl]="figure.imageUrl" [name]="figure.name" [year]="figure.year" [team]="figure.team" [variation]="figure.variation" [watchList]="figure.watchList" [total]="figure.total" [notes]="figure.notes"></app-figure-listing>
+        <app-figure-listing [imageUrl]="figure.imageUrl" [name]="figure.name" [year]="figure.year" [team]="figure.team" [variation]="figure.variation" [watchList]="figure.watchList" [total]="figure.total" [notes]="figure.notes" [id]="figure.id"></app-figure-listing>
     </li>
 </ul>

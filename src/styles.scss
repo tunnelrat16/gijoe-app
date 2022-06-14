@@ -139,13 +139,10 @@ h2 {
 }
 
 .figure-list .figure-name:hover {
-    text-shadow: 2px 2px 5px rgb(172, 2, 2)
+    text-shadow: 2px 2px 5px rgb(66, 48, 48)
 }
 
 .detail-list {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: 1fr;
     padding: 10px;
     margin-left: 30px;
 }
