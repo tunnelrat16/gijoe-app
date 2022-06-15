@@ -8,4 +8,4 @@ API Production Location: https://gijoe-api.herokuapp.com/api/gijoe
 
 # Screenshot of Site
 
-![Site Home Page](http://../src/assets/Site.PNG)
+![Site Home Page](https://github.com/tunnelrat16/gijoe-app/blob/master/src/assets/Site.PNG)
