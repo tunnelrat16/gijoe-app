@@ -10,20 +10,19 @@
         <p class="figure-watch">On Watch-List? {{figure.watchList}}</p>
         <p class="figure-notes ">Collection Notes: {{figure.notes}}</p>
     </div>
-    <form class="update-figure">
+    <form #updateFigureForm="ngForm" class="update-figure" (ngSubmit)="updateInfo(updateFigureForm.value)">
         <input type="submit" value="Update Info" />
         <label for="total">Update Total</label>
-        <input type="text" name="total" id="total" />
-
-        <label for="watch-list">Change Watch-List Status</label>
-        <input type="text" name="watch-list" id="watch-list" />
-
+        <input type="text" id="total" name="total" ngModel />
+        <label for="watch-list ">Watch-List?</label>
+        <input type="text" id="watch-list" name="watchList" ngModel />
         <label for="notes">Notes</label>
-        <textarea type="text" name="notes" id="notes"></textarea>
-        <input type="hidden" id="id" name="id" value={{figure.id}}>
-
+        <textarea type="text" id="notes" name="notes" ngModel></textarea>
+        <input type="hidden" id="id" name="id" ngModel={{figure.id}} />
+        <input type="hidden" id="image-url" name="imageUrl" ngModel={{figure.imageUrl}} />
+        <input type="hidden" id="name" name="name" ngModel={{figure.name}} />
+        <input type="hidden" id="year" name="year" ngModel={{figure.year}} />
+        <input type="hidden" id="team" name="team" ngModel={{figure.team}} />
+        <input type="hidden" id="variation" name="variation" ngModel={{figure.variation}} />
     </form>
-
-
-
 </div>

@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Figure } from '../models/Figure';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
 import { FigureService } from '../figure.service';
 
 @Component({
@@ -38,16 +37,12 @@ export class DetailPageComponent implements OnInit {
       this.figure = response.figure;
     });
   }
+
+
+updateInfo(updateFigure: Figure) {
+  console.log(updateFigure)
 }
 
-// export class DetailPageComponent implements OnInit {
-//   figures: Figure[] = [];
+}
 
-//   constructor(private figureService: FigureService) {}
 
-//   ngOnInit() {
-//     this.figureService.fetchFigures().subscribe(response => {
-//       this.figures = response.figures;
-//     });
-//   }
-// }

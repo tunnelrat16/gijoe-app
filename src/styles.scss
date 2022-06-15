@@ -159,6 +159,11 @@ h2 {
     display: block;
 }
 
+.update-figure .form-control {
+    width: 300px;
+    display: block;
+}
+
 .update-figure textarea {
     width: 300px;
     resize: none;
@@ -170,7 +175,8 @@ label {
 }
 
 input,
-textarea {
+textarea,
+.form-control {
     border-radius: 4px;
     border: 1px solid;
     font-size: 24px;

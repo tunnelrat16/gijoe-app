@@ -51,6 +51,10 @@ export class FigureService {
     );
   }
 
+  updateInfo(figure: Figure){
+    return this.http.post<FigureResponse>(this.figuresUrl, figure)
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
@@ -60,7 +64,7 @@ export class FigureService {
   }
 
 
-  /** Log a HeroService message with the MessageService */
+  /** Log a FigureService message with the MessageService */
   private log(message: string) {
     this.messageService.add(`FigureService: ${message}`);
   }
