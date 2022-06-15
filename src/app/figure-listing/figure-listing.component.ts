@@ -15,5 +15,6 @@ export class FigureListingComponent {
   @Input() watchList!: string;
   @Input() total!: string;
   @Input() notes!: string;
+  @Input() ownIt!: string;
 
 }

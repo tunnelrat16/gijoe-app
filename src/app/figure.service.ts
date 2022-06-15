@@ -52,7 +52,11 @@ export class FigureService {
   }
 
   updateInfo(figure: Figure){
-    return this.http.post<FigureResponse>(this.figuresUrl, figure)
+    const url = `${this.figuresUrl}`
+    return this.http.post<FigureResponse>(url, figure).pipe(
+      tap(_ => console.log(`updated figure id=${figure.id}`)),
+      catchError(this.handleError<any>('updateFigure'))
+    );
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

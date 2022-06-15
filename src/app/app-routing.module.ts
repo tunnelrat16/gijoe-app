@@ -25,7 +25,7 @@ const routes: Routes = [{
     path: 'figure',
     component: FigureDetailComponent,
   }, {
-    path: 'year',
+    path: 'year/:year',
     component: YearPageComponent,
   }, {
     path: 'error',

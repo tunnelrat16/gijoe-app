@@ -3,6 +3,7 @@ import { Figure } from '../models/Figure';
 import { ActivatedRoute } from '@angular/router';
 import { FigureService } from '../figure.service';
 
+
 @Component({
   selector: 'app-detail-page',
   templateUrl: './detail-page.component.html',
@@ -18,8 +19,11 @@ export class DetailPageComponent implements OnInit {
   @Input() watchList!: string;
   @Input() total!: string;
   @Input() notes!: string;
+  @Input() ownIt!: string;
 
   figure?: Figure
+
+  submitted = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -40,9 +44,15 @@ export class DetailPageComponent implements OnInit {
 
 
 updateInfo(updateFigure: Figure) {
-  console.log(updateFigure)
-}
+  this.figureService.updateInfo(updateFigure).subscribe(figure => {
+  console.log(figure);
+  this.submitted = true;
+  })
 
 }
 
 
+
+
+
+  }

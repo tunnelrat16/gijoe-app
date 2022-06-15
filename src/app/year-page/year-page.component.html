@@ -3,7 +3,7 @@
     <h2>Figure List</h2>
     <ul class="year-list">
         <li *ngFor="let figure of figures">
-            <div class="figure-list">
+            <div class="figure-list" *ngIf="!getYear(figure)">
                 <a class="figure-name" routerLink="/detail/{{figure.id}}">{{figure.name}}</a>
             </div>
         </li>
