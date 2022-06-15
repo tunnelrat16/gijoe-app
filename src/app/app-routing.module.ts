@@ -28,11 +28,11 @@ const routes: Routes = [{
     path: 'year/:year',
     component: YearPageComponent,
   }, {
-    path: '**', pathMatch: 'full',
-    component: ErrorPageComponent,
-  }, {
     path: 'detail/:id',
     component: DetailPageComponent,
+  }, {
+    path: '**', pathMatch: 'full',
+    component: ErrorPageComponent,
 }];
 
 @NgModule({
