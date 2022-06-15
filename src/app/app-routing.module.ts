@@ -28,7 +28,7 @@ const routes: Routes = [{
     path: 'year/:year',
     component: YearPageComponent,
   }, {
-    path: 'error',
+    path: '**', pathMatch: 'full',
     component: ErrorPageComponent,
   }, {
     path: 'detail/:id',

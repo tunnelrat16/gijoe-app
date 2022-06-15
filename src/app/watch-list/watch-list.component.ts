@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FigureService } from '../figure.service';
+import { Figure } from '../models/Figure';
 
 @Component({
   selector: 'app-watch-list',
@@ -6,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./watch-list.component.scss']
 })
 export class WatchListComponent implements OnInit {
+  figures: Figure[] = [];
 
-  constructor() { }
+  constructor(private figureService: FigureService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.figureService.fetchFigures().subscribe(response => {
+      this.figures = response.figures;
+      this.getWatchList(response)
+    });
   }
+
+
+getWatchList(figure: any): boolean {
+ return figure.watchList != "Yes"
+}
 
 }

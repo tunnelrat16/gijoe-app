@@ -16,6 +16,7 @@ import { YearPageComponent } from './year-page/year-page.component';
 import { FigureListComponent } from './figure-list/figure-list.component';
 import { DetailPageComponent } from './detail-page/detail-page.component';
 import { UpdateFormComponent } from './update-form/update-form.component';
+import { ArraySortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
@@ -31,14 +32,15 @@ import { UpdateFormComponent } from './update-form/update-form.component';
     YearPageComponent,
     FigureListComponent,
     DetailPageComponent,
-    UpdateFormComponent
+    UpdateFormComponent,
+    ArraySortPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

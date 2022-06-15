@@ -8,6 +8,11 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './year-page.component.html',
   styleUrls: ['./year-page.component.scss']
 })
+
+
+
+
+
 export class YearPageComponent implements OnInit {
   title(title: any) {
     throw new Error('Method not implemented.');

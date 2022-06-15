@@ -9,6 +9,27 @@ body {
     background-size: 100%;
 }
 
+#error-page {
+    font-family: Black Ops One, cursive;
+    background-image: url(./assets/Cobraclear.PNG);
+    background-size: cover;
+    min-height: 100vh;
+    font-size: 60px;
+}
+
+.error-message {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 200px;
+    text-shadow: 2px 2px 5px rgb(104, 103, 103);
+    text-align: center;
+}
+
+.error-message a {
+    text-decoration: none;
+    color: red;
+}
+
 .static-top {
     display: block;
     margin: 0px;

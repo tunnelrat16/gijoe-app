@@ -1,2 +1,8 @@
 <h2>The Watch-List</h2>
-<app-figure-detail></app-figure-detail>
+<ul class="figure-watch-list">
+    <li *ngFor="let figure of figures">
+        <div *ngIf="!getWatchList(figure)">
+            <app-figure-listing [imageUrl]="figure.imageUrl" [name]="figure.name" [year]="figure.year" [team]="figure.team" [variation]="figure.variation" [watchList]="figure.watchList" [total]="figure.total" [notes]="figure.notes" [id]="figure.id"></app-figure-listing>
+        </div>
+    </li>
+</ul>
