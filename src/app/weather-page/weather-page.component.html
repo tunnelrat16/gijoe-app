@@ -6,8 +6,8 @@
     </div>
     <div class="container" *ngIf="weatherData">
         <div class="upper-data">
-            <img src="../../assets/day.PNG" *ngIf="weatherData.main.temp > 59">
-            <img src="../../assets/night.PNG" *ngIf="weatherData.main.temp <= 59">
+            <img src="../../assets/day.PNG" *ngIf="weatherData.main.temp > 89">
+            <img src="../../assets/night.PNG" *ngIf="weatherData.main.temp <= 89">
 
             <div class="weather-data">
                 <div class="location">{{ weatherData?.name }}</div>
@@ -23,7 +23,7 @@
                 <div class="info-block">
                     <div class="info-block-label">
                         <img src="../../assets/min.png">
-                        <span>min</span>
+                        <span>Min</span>
                     </div>
                     <div class="info-block-value">
                         {{weatherData?.main?.temp_min | number: '1.0-0'}}°F
@@ -33,7 +33,7 @@
                 <div class="info-block">
                     <div class="info-block-label">
                         <img src="../../assets/max.png">
-                        <span>max</span>
+                        <span>Max</span>
                     </div>
                     <div class="info-block-value">
                         {{weatherData?.main?.temp_max | number: '1.0-0'}}°F
@@ -43,7 +43,7 @@
                 <div class="info-block">
                     <div class="info-block-label">
                         <img src="../../assets/humidity.png">
-                        <span>humidity</span>
+                        <span>Humidity</span>
                     </div>
                     <div class="info-block-value">
                         {{weatherData?.main?.humidity}}%
@@ -53,10 +53,10 @@
                 <div class="info-block">
                     <div class="info-block-label">
                         <img src="../../assets/wind.png">
-                        <span>wind</span>
+                        <span>Wind</span>
                     </div>
                     <div class="info-block-value">
-                        {{weatherData?.wind?.speed | number: '1.0-0'}} mi/h
+                        {{weatherData?.wind?.speed | number: '1.0-0'}} mph
                     </div>
                 </div>
             </div>
