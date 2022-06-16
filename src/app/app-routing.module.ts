@@ -7,6 +7,7 @@ import { FigureDetailComponent } from './figure-detail/figure-detail.component';
 import { YearPageComponent } from './year-page/year-page.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { DetailPageComponent } from './detail-page/detail-page.component';
+import { WeatherPageComponent } from './weather-page/weather-page.component';
 
 
 
@@ -30,6 +31,9 @@ const routes: Routes = [{
   }, {
     path: 'detail/:id',
     component: DetailPageComponent,
+  }, {
+    path: 'weather',
+    component: WeatherPageComponent,
   }, {
     path: '**', pathMatch: 'full',
     component: ErrorPageComponent,

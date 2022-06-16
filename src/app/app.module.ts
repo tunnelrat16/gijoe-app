@@ -17,6 +17,7 @@ import { FigureListComponent } from './figure-list/figure-list.component';
 import { DetailPageComponent } from './detail-page/detail-page.component';
 import { UpdateFormComponent } from './update-form/update-form.component';
 import { ArraySortPipe } from './sort.pipe';
+import { WeatherPageComponent } from './weather-page/weather-page.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ArraySortPipe } from './sort.pipe';
     FigureListComponent,
     DetailPageComponent,
     UpdateFormComponent,
-    ArraySortPipe
+    ArraySortPipe,
+    WeatherPageComponent
   ],
   imports: [
     BrowserModule,
