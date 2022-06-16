@@ -11,15 +11,15 @@ import { WeatherData } from './models/weather.model';
 
 export class WeatherService {
 
-
+secretAPIKey = environment.XRapidAPIKeyHeaderValue
 
   constructor(private http: HttpClient) { }
 
   getWeatherData(cityName: string): Observable<WeatherData> {
-    return this.http.get<WeatherData>(environment.weatherApiBaseUrl, {
+    return this.http.get<WeatherData>('https://community-open-weather-map.p.rapidapi.com/weather', {
       headers: new HttpHeaders()
-      .set(environment.XRapidAPIHostHeaderName, environment.XRapidAPIHostHeaderValue)
-      .set(environment.XRapidAPIKeyHeaderName, 'XRapidAPIKeyHeaderValue'),
+      .set('X-RapidAPI-Host', 'community-open-weather-map.p.rapidapi.com')
+      .set('X-RapidAPI-Key', this.secretAPIKey),
       params: new HttpParams()
       .set('q', cityName)
       .set('units', 'imperial')
