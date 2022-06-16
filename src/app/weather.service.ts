@@ -7,7 +7,11 @@ import { WeatherData } from './models/weather.model';
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class WeatherService {
+
+
 
   constructor(private http: HttpClient) { }
 
@@ -15,7 +19,7 @@ export class WeatherService {
     return this.http.get<WeatherData>(environment.weatherApiBaseUrl, {
       headers: new HttpHeaders()
       .set(environment.XRapidAPIHostHeaderName, environment.XRapidAPIHostHeaderValue)
-      .set(environment.XRapidAPIKeyHeaderName, environment.XRapidAPIKeyHeaderValue),
+      .set(environment.XRapidAPIKeyHeaderName, 'XRapidAPIKeyHeaderValue'),
       params: new HttpParams()
       .set('q', cityName)
       .set('units', 'imperial')
