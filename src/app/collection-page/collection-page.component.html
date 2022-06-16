@@ -1,6 +1,6 @@
 <h2>Personalized Collection List</h2>
 <ul class="figure-collection-list">
-    <li *ngFor="let figure of figures">
+    <li *ngFor="let figure of figures  | order_by: 'id'">
         <div *ngIf="getCollection(figure)">
             <app-figure-listing [imageUrl]="figure.imageUrl" [name]="figure.name" [year]="figure.year" [team]="figure.team" [variation]="figure.variation" [watchList]="figure.watchList" [total]="figure.total" [notes]="figure.notes" [id]="figure.id"></app-figure-listing>
         </div>
