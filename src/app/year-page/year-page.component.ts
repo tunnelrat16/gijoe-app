@@ -6,35 +6,30 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-year-page',
   templateUrl: './year-page.component.html',
-  styleUrls: ['./year-page.component.scss']
+  styleUrls: ['./year-page.component.scss'],
 })
-
-
-
-
-
 export class YearPageComponent implements OnInit {
   title(title: any) {
     throw new Error('Method not implemented.');
   }
   figures: Figure[] = [];
 
-
-  constructor(private figureService: FigureService, private route: ActivatedRoute,) {}
+  constructor(
+    private figureService: FigureService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.figureService.fetchFigures().subscribe(response => {
+    this.figureService.fetchFigures().subscribe((response) => {
       this.figures = response.figures;
-      console.log(response.figures)
-      this.getYear(response)
+      console.log(response.figures);
+      this.getYear(response);
     });
   }
 
-
   getYear(figure: any): boolean {
     const pageYear = Number(this.route.snapshot.paramMap.get('year'));
-    console.log(figure.year, pageYear)
-   return figure.year != pageYear
+    console.log(figure.year, pageYear);
+    return figure.year != pageYear;
   }
-
-  }
+}

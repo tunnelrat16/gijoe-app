@@ -23,8 +23,6 @@ export class DetailPageComponent implements OnInit {
 
   figure?: Figure
 
-  submitted = false;
-
   constructor(
     private route: ActivatedRoute,
     private figureService: FigureService,
@@ -41,18 +39,4 @@ export class DetailPageComponent implements OnInit {
       this.figure = response.figure;
     });
   }
-
-
-updateInfo(updateFigure: Figure) {
-  this.figureService.updateInfo(updateFigure).subscribe(figure => {
-  console.log(figure);
-  this.submitted = true;
-  })
-
 }
-
-
-
-
-
-  }

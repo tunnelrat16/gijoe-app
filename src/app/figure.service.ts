@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Figure } from './models/Figure';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 import { MessageService } from './message.service';
 
 type FiguresResponse = {
@@ -10,6 +10,7 @@ type FiguresResponse = {
 };
 
 type FigureResponse = {
+  id: any;
   figure: Figure;
 };
 
@@ -34,14 +35,6 @@ export class FigureService {
   };
 
 
-  /** GET figures from the server */
-  getFigures(): Observable<Figure[]> {
-    return this.http.get<Figure[]>(this.figuresUrl).pipe(
-      tap((_) => this.log('fetched figures')),
-      catchError(this.handleError<Figure[]>('getFigures', []))
-    );
-  }
-
   /** GET figure by id. Will 404 if id not found */
   getFigure(id: number){
     const url = `${this.figuresUrl}/${id}`;
@@ -51,6 +44,7 @@ export class FigureService {
     );
   }
 
+  /** Update figure by id. Will 404 if id not found */
   updateInfo(figure: Figure){
     const url = `${this.figuresUrl}`
     return this.http.post<FigureResponse>(url, figure).pipe(
@@ -59,6 +53,24 @@ export class FigureService {
     );
   }
 
+/** NOT CURRENTLY IN USE: POST: add a new figure to the server */
+addFigure(figure: Figure) {
+  return this.http.post<FigureResponse>(this.figuresUrl, figure, this.httpOptions).pipe(
+    tap((newFigure: FigureResponse) => this.log(`added figure w/ id=${newFigure.id}`)),
+    catchError(this.handleError<FigureResponse>('addHero'))
+  );
+}
+
+/** NOT CURRENTLY IN USE: DELETE: delete the figure from the server */
+deleteFigure(id: number) {
+  const url = `${this.figuresUrl}/${id}`;
+  return this.http.delete<FigureResponse>(url, this.httpOptions).pipe(
+    tap(_ => this.log(`deleted figure id=${id}`)),
+    catchError(this.handleError<FigureResponse>('deleteHero'))
+  );
+}
+
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
@@ -66,7 +78,6 @@ export class FigureService {
       return of(result as T);
     };
   }
-
 
   /** Log a FigureService message with the MessageService */
   private log(message: string) {

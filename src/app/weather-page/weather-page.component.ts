@@ -8,7 +8,6 @@ import { WeatherService } from '../weather.service';
   styleUrls: ['./weather-page.component.scss']
 })
 
-
 export class WeatherPageComponent implements OnInit {
 
     constructor(private weatherService: WeatherService) {
