@@ -3,14 +3,22 @@
 <div *ngIf="figure" class="figure-details">
     <img class="figure-avatar" src={{figure.imageUrl}} alt="Figure Picture" />
     <div class="details">
-        <p class="figure-name">Name: {{figure.name}}</p>
-        <p class="figure-year">Year: {{figure.year}}</p>
-        <p class="figure-affiliation">Affiliation: {{figure.team}}</p>
-        <p class="figure-variation">Variation: {{figure.variation}}</p>
-        <p class="figure-quantity">Number in Collection: {{figure.total}}</p>
-        <p class="figure-watch">On Watch-List? {{figure.watchList}}</p>
-        <p class="figure-notes ">Collection Notes: </p>
-        <p>{{figure.notes}}</p>
+        <p class="figure-name">Name:</p>
+        <p class="figure-year">Year:</p>
+        <p class="figure-affiliation">Affiliation:</p>
+        <p class="figure-variation">Variation:</p>
+        <p class="figure-quantity">Number in Collection:</p>
+        <p class="figure-watch">On Watch-List?</p>
+        <p class="figure-notes ">Collection Notes:</p>
+    </div>
+    <div class="responses">
+        <p class="figure-name">{{figure.name}}</p>
+        <p class="figure-year">{{figure.year}}</p>
+        <p class="figure-affiliation">{{figure.team}}</p>
+        <p class="figure-variation">{{figure.variation}}</p>
+        <p class="figure-quantity">{{figure.total}}</p>
+        <p class="figure-watch">{{figure.watchList}}</p>
+        <p class="figure-notes ">{{figure.notes}}</p>
     </div>
     <app-update-form></app-update-form>
 </div>

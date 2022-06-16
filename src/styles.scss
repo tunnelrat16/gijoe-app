@@ -58,6 +58,7 @@ h2 {
     margin-bottom: 36px;
     margin-left: 40px;
     margin-top: 20px;
+    text-shadow: 1px 1px 4px rgb(104, 103, 103);
 }
 
 .navigation-bar ul {
@@ -155,7 +156,7 @@ h2 {
     padding-bottom: 5px;
 }
 
-.figure-name {
+.year-list .figure-name {
     color: black;
     text-decoration: none;
 }
@@ -199,12 +200,18 @@ input,
 textarea,
 .form-control {
     border-radius: 4px;
-    border: 1px solid;
+    border: 1px opacity;
+    border-color: rgba(0, 0, 0, 0.39);
     font-size: 24px;
     box-sizing: border-box;
+    background-color: rgba(184, 182, 182, 0.493);
 }
 
 .figure-details .figure-name {
+    font-size: 30px;
+}
+
+.figure-listing .figure-name {
     font-size: 30px;
 }
 
