@@ -16,5 +16,7 @@ export class FigureListingComponent {
   @Input() total!: string;
   @Input() notes!: string;
   @Input() ownIt!: string;
+  @Input() version!: string;
+  @Input() variant!: string;
 
 }

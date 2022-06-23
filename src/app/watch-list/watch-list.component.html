@@ -2,7 +2,8 @@
 <ul class="figure-watch-list">
     <li *ngFor="let figure of figures | order_by: 'id'">
         <div *ngIf="!getWatchList(figure)">
-            <app-figure-listing [imageUrl]="figure.imageUrl" [name]="figure.name" [year]="figure.year" [team]="figure.team" [variation]="figure.variation" [watchList]="figure.watchList" [total]="figure.total" [notes]="figure.notes" [id]="figure.id"></app-figure-listing>
+            <app-figure-listing [imageUrl]="figure.imageUrl" [name]="figure.name" [version]="figure.version" [year]="figure.year" [team]="figure.team" [variation]="figure.variation" [variant]="figure.variant" [watchList]="figure.watchList" [total]="figure.total"
+                [notes]="figure.notes" [id]="figure.id"></app-figure-listing>
         </div>
     </li>
 </ul>
