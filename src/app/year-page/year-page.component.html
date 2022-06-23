@@ -4,6 +4,7 @@
     <ul class="year-list">
         <li *ngFor="let figure of figures | order_by: 'id'">
             <div class="figure-list" *ngIf="!getYear(figure)">
+                <img routerLink="/detail/{{figure.id}}" src="{{figure.imageUrl}}" title="{{figure.name}} {{figure.version}}">
                 <a class="figure-name" routerLink="/detail/{{figure.id}}">{{figure.name}}</a>
             </div>
         </li>
