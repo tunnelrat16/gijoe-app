@@ -1,0 +1,28 @@
+<app-nav-year></app-nav-year>
+<h2>Vehicle Details</h2>
+<div *ngIf="vehicle" class="vehicle-details">
+    <img class="vehicle-avatar" src={{vehicle.imageUrl}} alt="Vehicle Picture" />
+    <div class="details">
+        <p class="vehicle-name">Name:</p>
+        <p class="vehicle-aka">Alt Description:</p>
+        <p class="vehicle-version">Version:</p>
+        <p class="vehicle-year">Year:</p>
+        <p class="vehicle-affiliation">Affiliation:</p>
+        <p class="vehicle-variant">Variant Info:</p>
+        <p class="vehicle-quantity">Number in Collection:</p>
+        <p class="vehicle-watch">On Watch-List?</p>
+        <p class="vehicle-notes ">Collection Notes:</p>
+    </div>
+    <div class="responses">
+        <p class="vehicle-name">{{vehicle.name}}</p>
+        <p class="vehicle-aka">{{vehicle.aka}}</p>
+        <p class="vehicle-version">{{vehicle.version}}</p>
+        <p class="vehicle-year">{{vehicle.year}}</p>
+        <p class="vehicle-affiliation">{{vehicle.team}}</p>
+        <p class="vehicle-variant">{{vehicle.variant}}</p>
+        <p class="vehicle-quantity">{{vehicle.total}}</p>
+        <p class="vehicle-watch">{{vehicle.watchList}}</p>
+        <p class="vehicle-notes ">{{vehicle.notes}}</p>
+    </div>
+    <app-update-form></app-update-form>
+</div>

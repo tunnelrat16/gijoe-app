@@ -1,0 +1,9 @@
+<h2>Vehicle List</h2>
+<ul class="year-list">
+    <li *ngFor="let vehicle of vehicles | order_by: 'id'">
+        <div class="vehicle-list" *ngIf="!getYear(vehicle)">
+            <img routerLink="/vehicle/{{vehicle.id}}" src="{{vehicle.imageUrl}}" title="{{vehicle.name}} {{vehicle.version}}">
+            <a class="figure-name" routerLink="/vehicle/{{vehicle.id}}">{{vehicle.name}}</a>
+        </div>
+    </li>
+</ul>

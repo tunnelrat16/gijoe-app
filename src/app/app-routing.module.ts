@@ -8,6 +8,7 @@ import { YearPageComponent } from './year-page/year-page.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { DetailPageComponent } from './detail-page/detail-page.component';
 import { WeatherPageComponent } from './weather-page/weather-page.component';
+import { VehiclePageComponent } from './vehicle-page/vehicle-page.component';
 
 
 
@@ -25,6 +26,9 @@ const routes: Routes = [{
   }, {
     path: 'figure',
     component: FigureDetailComponent,
+  }, {
+    path: 'vehicle/:id',
+    component: VehiclePageComponent,
   }, {
     path: 'year/:year',
     component: YearPageComponent,

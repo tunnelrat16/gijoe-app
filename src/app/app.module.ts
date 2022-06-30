@@ -18,6 +18,8 @@ import { DetailPageComponent } from './detail-page/detail-page.component';
 import { UpdateFormComponent } from './update-form/update-form.component';
 import { ArraySortPipe } from './sort.pipe';
 import { WeatherPageComponent } from './weather-page/weather-page.component';
+import { YearVehicleComponent } from './year-vehicle/year-vehicle.component';
+import { VehiclePageComponent } from './vehicle-page/vehicle-page.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { WeatherPageComponent } from './weather-page/weather-page.component';
     DetailPageComponent,
     UpdateFormComponent,
     ArraySortPipe,
-    WeatherPageComponent
+    WeatherPageComponent,
+    YearVehicleComponent,
+    VehiclePageComponent
   ],
   imports: [
     BrowserModule,
